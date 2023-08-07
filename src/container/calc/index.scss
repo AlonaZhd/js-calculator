@@ -1,0 +1,89 @@
+@use '../../style' as s;
+
+
+.main {
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.box {
+    background-color: s.color('background');
+    height: 300px;
+    width: 250px;
+    border-radius: s.space(3);
+	padding: s.space(5);
+	display: flex;
+	flex-direction: column;
+	gap: s.space(5);
+}
+  
+  .display {
+    background-color: s.color('input');
+	border-bottom: black 2px solid;
+    height: 40px;
+	padding: s.space(2);
+	display: flex;
+	align-items: center;
+	justify-content: end;
+  }
+  
+  .buttons {
+	display: grid;
+	justify-items: center;
+	grid-template-columns: repeat(4, 1fr);
+	gap: s.space(2);
+  }
+  
+  .button {
+    width: 40px;
+    height: 30px;
+    border-radius: s.space(2);
+	border-bottom: black 2px solid;
+	transition: opacity 0.6s;
+    cursor: pointer;
+
+	&:hover {
+		opacity: 0.7;
+	}
+
+	&:active {
+		border-top: black 2px solid;
+	}
+
+	&-gray {
+		color: s.color('light');
+		background-color: s.color('btn-gray');
+
+		&:active {
+			border-bottom: s.color('btn-gray') 2px solid;
+		}
+	}
+	  
+	&-pink {
+		color: black;
+		background-color: s.color('btn-pink');
+		
+		&:active {
+			border-bottom: s.color('btn-pink') 2px solid;
+		}
+	}
+	  
+	&-black {
+		color: s.color('light');
+		background-color: s.color('btn-darkgrey');
+		
+		&:active {
+			border-bottom: s.color('btn-darkgrey') 2px solid;
+		}
+	}
+	  
+	&-orange {
+		color: black;
+		background-color: s.color('btn-orange');
+		
+		&:active {
+			border-bottom: s.color('btn-orange') 2px solid;
+		}
+	  }
+  }
