@@ -5,33 +5,33 @@
 <main class="main">
     <div class="box">
         <div class="display" id="output">
-            0 {{!-- <input type="text" readonly size="18"> --}}
+            {{!-- <input type="text" readonly size="18"> --}}
         </div>
         <div class="buttons">
             <button class="button button-gray">mrc</button>
             <button class="button button-gray">m</button>
             <button class="button button-gray">m+</button>
-            <button class="button button-pink">/</button>
+            <button onclick="calc.operation('/')" class="button button-pink">/</button>
 
-            <button class="button button-black">7</button>
-            <button class="button button-black">8</button>
-            <button class="button button-black">9</button>
-            <button class="button button-pink">*</button>
+            <button onclick="calc.add(7)" class="button button-black">7</button>
+            <button onclick="calc.add(8)" class="button button-black">8</button>
+            <button onclick="calc.add(9)" class="button button-black">9</button>
+            <button onclick="calc.operation('*')" class="button button-pink">*</button>
 
-            <button class="button button-black">4</button>
-            <button class="button button-black">5</button>
-            <button class="button button-black">6</button>
-            <button class="button button-pink">-</button>
+            <button onclick="calc.add(4)" class="button button-black">4</button>
+            <button onclick="calc.add(5)" class="button button-black">5</button>
+            <button onclick="calc.add(6)" class="button button-black">6</button>
+            <button onclick="calc.operation('-')" class="button button-pink">-</button>
 
-            <button class="button button-black">1</button>
-            <button class="button button-black">2</button>
-            <button class="button button-black">3</button>
-            <button class="button button-pink">+</button>
+            <button onclick="calc.add(1)" class="button button-black">1</button>
+            <button onclick="calc.add(2)" class="button button-black">2</button>
+            <button onclick="calc.add(3)" class="button button-black">3</button>
+            <button onclick="calc.operation('+')" class="button button-pink">+</button>
 
-            <button class="button button-black">0</button>
-            <button class="button button-black">.</button>
-            <button class="button button-black">C</button>
-            <button class="button button-orange">=</button>
+            <button onclick="calc.add(0)" class="button button-black">0</button>
+            <button onclick="calc.dot()" class="button button-black">.</button>
+            <button onclick="calc.reset()" class="button button-black">C</button>
+            <button onclick="calc.result()" class="button button-orange">=</button>
         </div>
     </div>
 </main>
