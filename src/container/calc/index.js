@@ -1,6 +1,6 @@
 class Calc {
   static #value = ''
-
+  static #NAME = 'calc'
   static #isDot = false
 
   static add = (newValue) => {
@@ -19,7 +19,7 @@ class Calc {
   }
 
   static #output = () => {
-    this.#save
+    this.#save()
     window.output.innerHTML = this.#value
   }
 
@@ -57,12 +57,21 @@ class Calc {
   }
 
   static #save = () => {
-    window.localStorage.setItem('calc', this.#value)
+    window.localStorage.setItem(this.#NAME, this.#value)
   }
 
   static #load = () => {
-    window.localStorage.getItem('calc') || ''
+    this.#value =
+      window.localStorage.getItem(this.#NAME) || ''
+  }
+
+  static init = () => {
+    this.#load()
+    this.#output()
+    console.log('Calc is init')
   }
 }
+
+Calc.init()
 
 window.calc = Calc
